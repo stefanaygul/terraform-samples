@@ -1,9 +1,31 @@
 I created 2 structures the first one with Cloudfront and ECS solution and the second one with EC2(compute) solution. I added the terraform files for ECS and Cloudfront solution but i added 2 architecture design and explanation on that repo.
 
-# High Available Structure with Multi-AZ Redis and RDS
+# 1. High Available EC2 Structure with Multi-AZ Redis and RDS
+
+The following figure provides another look at that classic web application architecture and how it can leverage the AWS Cloud computing infrastructure.
 
 <img width="786" alt="Screenshot 2023-09-17 at 18 55 32" src="https://github.com/stefanaygul/terraform-samples/assets/30243843/abf40e81-630f-432c-8ffe-31a79cd017fa">
 
+
+Virtual Private Network (VPC) - Created a VPC and 3 private subnet  and i
+
+Firstly, create 3 public subnets for frontend, database and backend applications and attached an Internet Gateway to VPC.
+Than, configure route tables for the public subnets to route traffic to the Internet Gateway.
+
+After that, create 3 private subnets for frontend, database and backend applications. I did not associate these subnets with a Network ACL.
+Than, configure route tables for the private subnets to route traffic to NAT Gateways.
+
+Finally, created 3 NAT Gateways in public subnets and associated an Elastic IP address with each NAT Gateway. Update the route tables of the private subnets to route outbound traffic to the respective NAT Gateways.
+
+DNS services with Amazon Route 53 – Provides DNS services to simplify domain management.
+Amazon CloudFront – Edge caches high-volume content to decrease the latency to customers.
+Amazon CloudFront with AWS WAF – Filters malicious traffic, including cross site scripting (XSS) and SQL injection via customer-defined rules.
+Elastic Load Balancing (ELB) – Enabled to spread load across multiple Availability Zones and Amazon EC2 Auto Scaling groups for redundancy and decoupling of services.
+DDoS protection with AWS Shield – Safeguards your infrastructure against the most common network and transport layer DDoS attacks automatically.
+Security groups – Moves security to the instance to provide a stateful, host-level firewall for both web and application servers.
+Amazon ElastiCache – Provides caching services with Redis to remove load from the app and database, and lower latency for frequent requests.
+Amazon Relational Database Service (Amazon RDS) – Created a highly available, multi-AZ database architecture
+Amazon Simple Storage Service (Amazon S3) – Enables simple HTTP-based object storage for backups and static assets like images and video.
 
 # Terraform Structure
 
@@ -13,6 +35,8 @@ You can create dev, stage and Prod directories and have specific implementation 
 
 Also, i stored terraform state files under the S3 bucket ( ninja-terraform-state) that information is important because if you lost your terraform configuration also the state will be under that repo and you can download that state file and continue implementation without any error.
 
+
+# 2. High Available ECS and Cloudfront Structure with Multi-AZ Redis and RDS
 # Terraform Implementation
 
 1. Clone the entr-infra repo with below command:
