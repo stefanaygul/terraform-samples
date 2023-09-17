@@ -7,7 +7,7 @@ The following figure provides another look at that classic web application archi
 <img width="786" alt="Screenshot 2023-09-17 at 18 55 32" src="https://github.com/stefanaygul/terraform-samples/assets/30243843/abf40e81-630f-432c-8ffe-31a79cd017fa">
 
 
-Virtual Private Network (VPC) - Created a VPC and 3 private subnet  and i
+# Virtual Private Network (VPC)
 
 Firstly, create 3 public subnets for frontend, database and backend applications and attached an Internet Gateway to VPC.
 Than, configure route tables for the public subnets to route traffic to the Internet Gateway.
