@@ -2,6 +2,8 @@ I created 2 structures the first one with Cloudfront and ECS solution and the se
 
 # 
 
+<img width="791" alt="Screenshot 2023-09-17 at 18 54 34" src="https://github.com/stefanaygul/terraform-samples/assets/30243843/357adeaa-56c9-463b-9bf1-9a3a3c33290b">
+
 # Terraform Structure
 
 The Modules part is specifically for each AWS service. For example, the VPC module has all the behavior which you can implement manually on AWS Console. Also that directory will be better to use for environment specific implementations. 
