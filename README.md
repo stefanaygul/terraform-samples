@@ -1,8 +1,9 @@
 I created 2 structures the first one with Cloudfront and ECS solution and the second one with EC2(compute) solution. I added the terraform files for ECS and Cloudfront solution but i added 2 architecture design and explanation on that repo.
 
-# 
+# High Available Structure with Multi-AZ Redis and RDS
 
-<img width="791" alt="Screenshot 2023-09-17 at 18 54 34" src="https://github.com/stefanaygul/terraform-samples/assets/30243843/357adeaa-56c9-463b-9bf1-9a3a3c33290b">
+<img width="786" alt="Screenshot 2023-09-17 at 18 55 32" src="https://github.com/stefanaygul/terraform-samples/assets/30243843/abf40e81-630f-432c-8ffe-31a79cd017fa">
+
 
 # Terraform Structure
 
