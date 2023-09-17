@@ -17,15 +17,15 @@ Than, configure route tables for the private subnets to route traffic to NAT Gat
 
 Finally, created 3 NAT Gateways in public subnets and associated an Elastic IP address with each NAT Gateway. Update the route tables of the private subnets to route outbound traffic to the respective NAT Gateways.
 
-DNS services with Amazon Route 53 – Provides DNS services to simplify domain management.
-Amazon CloudFront – Edge caches high-volume content to decrease the latency to customers.
-Amazon CloudFront with AWS WAF – Filters malicious traffic, including cross site scripting (XSS) and SQL injection via customer-defined rules.
-Elastic Load Balancing (ELB) – Enabled to spread load across multiple Availability Zones and Amazon EC2 Auto Scaling groups for redundancy and decoupling of services.
-DDoS protection with AWS Shield – Safeguards your infrastructure against the most common network and transport layer DDoS attacks automatically.
-Security groups – Moves security to the instance to provide a stateful, host-level firewall for both web and application servers.
-Amazon ElastiCache – Provides caching services with Redis to remove load from the app and database, and lower latency for frequent requests.
-Amazon Relational Database Service (Amazon RDS) – Created a highly available, multi-AZ database architecture
-Amazon Simple Storage Service (Amazon S3) – Enables simple HTTP-based object storage for backups and static assets like images and video.
+**DNS services with Amazon Route 53** – Provides DNS services to simplify domain management.
+**Amazon CloudFront – Edge caches high** - Volume content to decrease the latency to customers.
+**Amazon CloudFront with AWS WAF** – Filters malicious traffic, including cross site scripting (XSS) and SQL injection via customer-defined rules.
+**Elastic Load Balancing (ELB)** – Enabled to spread load across multiple Availability Zones and Amazon EC2 Auto Scaling groups for redundancy and decoupling of services.
+**DDoS protection with AWS Shield** – Safeguards your infrastructure against the most common network and transport layer DDoS attacks automatically.
+**Security groups** – Moves security to the instance to provide a stateful, host-level firewall for both web and application servers.
+**Amazon ElastiCache** – Provides caching services with Redis to remove load from the app and database, and lower latency for frequent requests.
+**Amazon Relational Database Service (Amazon RDS)** – Created a highly available, multi-AZ database architecture
+**Amazon Simple Storage Service (Amazon S3)** – Enables simple HTTP-based object storage for backups and static assets like images and video.
 
 # Terraform Structure
 
