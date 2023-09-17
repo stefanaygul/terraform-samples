@@ -17,8 +17,10 @@ Than, configure route tables for the private subnets to route traffic to NAT Gat
 
 Finally, created 3 NAT Gateways in public subnets and associated an Elastic IP address with each NAT Gateway. Update the route tables of the private subnets to route outbound traffic to the respective NAT Gateways.
 
-**DNS services with Amazon Route 53**  Provides DNS services to simplify domain management.
+**DNS services with Amazon Route 53**  - Provides DNS services to simplify domain management.
+
 **Amazon CloudFront – Edge caches high** - Volume content to decrease the latency to customers.
+
 **Amazon CloudFront with AWS WAF** – Filters malicious traffic, including cross site scripting (XSS) and SQL injection via customer-defined rules.
 **Elastic Load Balancing (ELB)** – Enabled to spread load across multiple Availability Zones and Amazon EC2 Auto Scaling groups for redundancy and decoupling of services.
 **DDoS protection with AWS Shield** – Safeguards your infrastructure against the most common network and transport layer DDoS attacks automatically.
