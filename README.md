@@ -47,7 +47,7 @@ Also, i stored terraform state files under the S3 bucket ( ninja-terraform-state
 # 2. High Available ECS and Cloudfront Structure with Multi-AZ Redis and RDS
 # Terraform Implementation
 
-1. Clone the entr-infra repo with below command:
+1. Clone the terraform-smaples repo with below command:
 $ git clone git@github.com-stefanaygul:terraform-samples.git
 
 2. As i mentioned above you will see dev, stage and prod environments, if you want to add any configuration for dev, you will open dev directory and then add your configuration to dev.tf or you can create a new file with each name and you will give the variable names and configuration settings. 
