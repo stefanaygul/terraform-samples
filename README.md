@@ -66,8 +66,11 @@ terraform init command will initialize the version and providers which we pointe
 Manual Steps on AWS
 
 - IAM(Creating user, adding role and groups)
-- S3 bucket creation except cloudfront
+     Managing, users, groups and roles manually better and faster than terraform and we can discuss about that topis deeply. 
+- S3 bucket creation and DynamoDb settings except cloudfront
+     Also, i created **ninja-terraform-state** bucket to store state file and **terraform_state_lock** table on Dynamodb to lock the state file for deletion by mistake.
 - Route 53 (Domain settings)
+     you should create Hosted Zone like example.com
 
 
 There are 2 services implemented on AWS and one of them is frontend and the other one is backend api. The frontend part is implemented with S3, Cloudfront and Route 53 architecture and you can see the design below. 
